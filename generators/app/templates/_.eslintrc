@@ -1,0 +1,35 @@
+{
+    "rules": {
+        "no-console": [
+            0
+        ],
+        "react/prop-types": [
+            0
+        ],
+        "react/display-name": [
+            0
+        ]
+    },
+    "globals": {
+        "uberallLocationListingsImports": true
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "classes": true,
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react"
+    ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "<%= projectName %>",
+  "version": "1.0.0",
+  "description": "<%= projectDescription %>",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --port <%= port %> --hot --inline --progress",
+    "build": "NODE_ENV=development webpack --progress --inline",
+    "build:watch": "NODE_ENV=development webpack --progress --watch --hot --inline",
+    "gen:component": "plop component",
+    "build:production": "NODE_ENV=production webpack --progress --config webpack.config.prod.js",
+    "stats": "NODE_ENV=production webpack --progress --json > stats.json --config webpack.config.prod.js",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "jest --watch --config ./jest.config.json",
+    "test:watch:all": "jest --watchAll --config ./jest.config.json",
+    "test:coverage": "jest --coverage --config ./jest.config.json"
+  },
+  "author": "Uberall Dev Team",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    <% if (usesRedux === true) { %>
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    <% } %>
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-lodash": "^3.2.10",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.26.0",
+    "enzyme": "^2.6.0",
+    "eslint": "^3.11.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-react": "^6.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "imports-loader": "^0.6.5",
+    "jest": "^17.0.3",
+    "jsx-control-statements": "^3.1.5",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "plop": "^1.7.3",
+    "postcss-loader": "^1.1.1",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^15.4.1",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2",
+    "plop": "^1.7.3"
+  }
+}

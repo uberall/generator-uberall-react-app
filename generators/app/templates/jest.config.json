@@ -1,0 +1,6 @@
+{
+  "testPathDirs": ["./src/"],
+  "setupFiles": [
+    "./jestSetup.js"
+  ]
+}
