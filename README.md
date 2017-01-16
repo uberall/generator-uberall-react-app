@@ -1,4 +1,4 @@
-# generator-uberall-react-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-uberall-react-app [![NPM version][npm-image]][npm-url]
 > Creates a boilerplate React app for Uberall
 
 ## Installation
