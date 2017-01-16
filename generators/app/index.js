@@ -58,6 +58,12 @@ module.exports = Generator.extend({
       this.destinationPath('.eslintrc')
     );
 
+    // .gitignore
+    this.fs.copy(
+      this.templatePath('_.gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
     // README.md
     this.fs.copyTpl(
       this.templatePath('README.md'),
@@ -96,7 +102,6 @@ module.exports = Generator.extend({
       'src/components',
       '.babelrc',
       '.editorconfig',
-      '.gitignore',
       'jest.config.json',
       'jestSetup.js',
       'plopfile.js'
